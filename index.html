@@ -4055,22 +4055,6 @@
 
                     <!-- Creative Charts -->
                     <div style="margin-top:1.5rem;">
-                        <div class="charts-container">
-                            <div class="chart-card">
-                                <div class="chart-header">
-                                    <div class="chart-title">🏆 Top Creatives by Leads</div>
-                                    <div class="chart-subtitle">Consolidated across all runs</div>
-                                </div>
-                                <div class="chart-wrap tall"><canvas id="mar_asset_leads"></canvas></div>
-                            </div>
-                            <div class="chart-card">
-                                <div class="chart-header">
-                                    <div class="chart-title">💰 Cost Per Result by Creative (₹)</div>
-                                    <div class="chart-subtitle">Lower is better · creatives with leads only</div>
-                                </div>
-                                <div class="chart-wrap tall"><canvas id="mar_asset_cpr"></canvas></div>
-                            </div>
-                        </div>
                         <div class="charts-container" style="margin-top:1.2rem;">
                             <div class="chart-card">
                                 <div class="chart-header">
@@ -11527,29 +11511,6 @@
                     { label: 'Reach', data: reach, backgroundColor: 'rgba(0,200,83,0.7)', borderRadius: 6 }
                 ]},
                 options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED' } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0' } }, scales: { y: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return v >= 100000 ? (v/100000).toFixed(1)+'L' : v >= 1000 ? (v/1000).toFixed(0)+'K' : v; } } }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } }
-            });
-
-            // Creative charts data
-            var assetNames  = ['Single Image Poster', 'Testimonial-Devaraj', 'Why NextLevel', 'AI Architect', 'Carousel', 'Tamil Voice Over', 'Testimonial Asset', 'Civil Engineer', 'AI Overview', 'Testimonial-Bashyam', 'Testimonial Hasnain'];
-            var assetLeads  = [263, 64, 19, 8, 6, 8, 5, 3, 2, 2, 1];
-            var assetCPR    = [78.97, 131.40, 102.83, 220.35, 623.93, 247.13, 121.69, 330.11, 140.91, 387.93, 81.75];
-            var assetLeadClrs = assetLeads.map(function(v){ return v >= 100 ? 'rgba(0,200,83,0.85)' : v >= 15 ? 'rgba(66,133,244,0.85)' : v >= 5 ? 'rgba(193,53,132,0.75)' : 'rgba(155,89,182,0.65)'; });
-            var assetCPRClrs  = assetCPR.map(function(v){ return v < 100 ? 'rgba(0,200,83,0.85)' : v < 150 ? 'rgba(255,179,0,0.85)' : v < 300 ? 'rgba(232,71,24,0.85)' : 'rgba(244,67,54,0.85)'; });
-
-            // Top creatives by leads (horizontal bar)
-            mkChart('mar_asset_leads', {
-                type: 'bar', indexAxis: 'y',
-                data: { labels: assetNames, datasets: [{ label: 'Leads', data: assetLeads, backgroundColor: assetLeadClrs, borderRadius: 5 }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ' + c.parsed.x + ' leads'; } } }) }, scales: { x: { beginAtZero: true, grid: GRID, ticks: TICK }, y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } } } }
-            });
-
-            // CPR by creative (horizontal bar, only those with leads)
-            var cprNames = ['Single Image', 'Hasnain', 'Why NextLevel', 'Testimonial Asset', 'AI Overview', 'Tamil Voice', 'Devaraj', 'AI Architect', 'Civil Eng', 'Bashyam', 'Carousel'];
-            var cprVals  = [78.97, 81.75, 102.83, 121.69, 140.91, 247.13, 131.40, 220.35, 330.11, 387.93, 623.93];
-            mkChart('mar_asset_cpr', {
-                type: 'bar', indexAxis: 'y',
-                data: { labels: cprNames, datasets: [{ label: 'CPR (₹)', data: cprVals, backgroundColor: cprVals.map(function(v){ return v < 100 ? 'rgba(0,200,83,0.85)' : v < 150 ? 'rgba(255,179,0,0.85)' : v < 300 ? 'rgba(232,71,24,0.85)' : 'rgba(244,67,54,0.85)'; }), borderRadius: 5 }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ₹' + c.parsed.x.toFixed(2); } } }) }, scales: { x: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹'+v; } } }, y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } } } }
             });
 
             // Video funnel per creative (top 8 by video completions)
