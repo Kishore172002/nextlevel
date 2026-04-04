@@ -4063,13 +4063,6 @@
                                 </div>
                                 <div class="chart-wrap tall"><canvas id="mar_video_funnel"></canvas></div>
                             </div>
-                            <div class="chart-card">
-                                <div class="chart-header">
-                                    <div class="chart-title">📊 Spend vs Leads — Creative Level</div>
-                                    <div class="chart-subtitle">Efficiency scatter — bubble size = spend</div>
-                                </div>
-                                <div class="chart-wrap tall"><canvas id="mar_creative_scatter"></canvas></div>
-                            </div>
                         </div>
                     </div>
 
@@ -11521,21 +11514,6 @@
                 options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED', font: { size: 11 } } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0' } }, scales: { x: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } }, y: { beginAtZero: true, grid: GRID, ticks: TICK } } }
             });
 
-            // Spend vs Leads bubble/scatter for creatives
-            mkChart('mar_creative_scatter', {
-                type: 'bubble',
-                data: { datasets: [
-                    { label: 'Single Image', data: [{ x: 263, y: 78.97, r: 18 }], backgroundColor: 'rgba(0,200,83,0.7)' },
-                    { label: 'Devaraj', data: [{ x: 64, y: 131.40, r: 12 }], backgroundColor: 'rgba(66,133,244,0.7)' },
-                    { label: 'Why NextLevel', data: [{ x: 19, y: 102.83, r: 8 }], backgroundColor: 'rgba(0,132,255,0.7)' },
-                    { label: 'AI Architect', data: [{ x: 8, y: 220.35, r: 7 }], backgroundColor: 'rgba(255,179,0,0.7)' },
-                    { label: 'Carousel', data: [{ x: 6, y: 623.93, r: 10 }], backgroundColor: 'rgba(244,67,54,0.7)' },
-                    { label: 'ResetOff', data: [{ x: 80, y: 58.51, r: 9 }], backgroundColor: 'rgba(0,217,192,0.7)' },
-                    { label: 'Tamil Voice', data: [{ x: 8, y: 247.13, r: 6 }], backgroundColor: 'rgba(193,53,132,0.7)' },
-                    { label: 'Civil Eng', data: [{ x: 3, y: 330.11, r: 6 }], backgroundColor: 'rgba(155,89,182,0.7)' }
-                ]},
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED', font: { size: 10 }, boxWidth: 10 } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0', callbacks: { label: function(c){ return c.dataset.label + ': ' + c.raw.x + ' leads @ ₹' + c.raw.y + ' CPR'; } } } }, scales: { x: { title: { display: true, text: 'Leads Generated', color: '#A0AEC0' }, grid: GRID, ticks: TICK }, y: { title: { display: true, text: 'Cost Per Result (₹)', color: '#A0AEC0' }, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹'+v; } } } } }
-            });
         }
 
         var marchMetaInit = false;
