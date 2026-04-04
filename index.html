@@ -9559,13 +9559,6 @@
                             </div>
                             <div class="chart-wrap tall"><canvas id="marchAssetsByResultsChart"></canvas></div>
                         </div>
-                        <div class="chart-card">
-                            <div class="chart-header">
-                                <div class="chart-title">💰 Cost Efficiency by Asset</div>
-                                <div class="chart-subtitle">Cost per result (CPR) for top performers</div>
-                            </div>
-                            <div class="chart-wrap tall"><canvas id="marchAssetsCPRChart"></canvas></div>
-                        </div>
                     </div>
 
                     <!-- Charts Row 2: Video Performance -->
@@ -11606,39 +11599,6 @@
                     },
                     scales: {
                         x: { beginAtZero: true, grid: GRID, ticks: TICK },
-                        y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } }
-                    }
-                }
-            });
-
-            // CPR by Asset (Top 10)
-            var assetCPRLabels = ['Single image', 'Why NextLevel', 'Testimonial', 'Tamil Voice', 'Testimonial Devaraj', 'AI overview', 'AI Architect', 'Testimonial Civil', 'Testimonial bashyam', 'Carousel'];
-            var assetCPRValues = [78.96, 102.83, 121.69, 122.69, 131.40, 140.91, 220.35, 330.11, 387.93, 623.93];
-            var assetCPRColors = assetCPRValues.map(function(v) { 
-                return v < 100 ? 'rgba(0,200,83,0.85)' : v < 150 ? 'rgba(255,179,0,0.85)' : v < 250 ? 'rgba(232,71,24,0.85)' : 'rgba(244,67,54,0.85)'; 
-            });
-
-            mkChart('marchAssetsCPRChart', {
-                type: 'bar',
-                indexAxis: 'y',
-                data: {
-                    labels: assetCPRLabels,
-                    datasets: [{
-                        label: 'Cost Per Result (₹)',
-                        data: assetCPRValues,
-                        backgroundColor: assetCPRColors,
-                        borderRadius: 6
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: tt({ callbacks: { label: function(c) { return ' ₹' + c.parsed.x.toFixed(2) + ' per lead'; } } })
-                    },
-                    scales: {
-                        x: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v) { return '₹' + v; } } },
                         y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } }
                     }
                 }
