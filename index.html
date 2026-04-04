@@ -3740,6 +3740,45 @@
                     </div>
                 </div>
 
+                <!-- ══ Campaign Charts ══ -->
+                <div style="margin-top:2rem;">
+                    <div style="padding:.8rem 1.2rem;background:rgba(0,132,255,0.08);border-left:4px solid #0084FF;border-radius:8px;margin-bottom:1.2rem;">
+                        <div style="font-size:.72rem;color:#0084FF;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;">📊 Campaign Performance — March 2026</div>
+                    </div>
+                    <div class="charts-container">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div class="chart-title">Leads by Campaign</div>
+                                <div class="chart-subtitle">WhatsApp conversations · Mar 1–31</div>
+                            </div>
+                            <div class="chart-wrap"><canvas id="mar_leads"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div class="chart-title">Cost Per Result (₹) — colour coded</div>
+                                <div class="chart-subtitle">Green &lt;₹80 · Amber &lt;₹130 · Red ≥₹130</div>
+                            </div>
+                            <div class="chart-wrap"><canvas id="mar_cpr"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="charts-container" style="margin-top:1.2rem;">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div class="chart-title">Spend vs Leads by Campaign</div>
+                                <div class="chart-subtitle">Dual axis — spend (left) · leads (right)</div>
+                            </div>
+                            <div class="chart-wrap"><canvas id="mar_spend"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div class="chart-title">Reach vs Impressions by Campaign</div>
+                                <div class="chart-subtitle">Total audience exposure — Mar 2026</div>
+                            </div>
+                            <div class="chart-wrap"><canvas id="mar_reach"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ══════════════════════════════════════════════════ -->
                 <!-- CREATIVE ASSET PERFORMANCE — MARCH 2026 (Ads Level) -->
                 <!-- ══════════════════════════════════════════════════ -->
@@ -4014,6 +4053,42 @@
                         </div>
                     </div>
 
+                    <!-- Creative Charts -->
+                    <div style="margin-top:1.5rem;">
+                        <div class="charts-container">
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <div class="chart-title">🏆 Top Creatives by Leads</div>
+                                    <div class="chart-subtitle">Consolidated across all runs</div>
+                                </div>
+                                <div class="chart-wrap tall"><canvas id="mar_asset_leads"></canvas></div>
+                            </div>
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <div class="chart-title">💰 Cost Per Result by Creative (₹)</div>
+                                    <div class="chart-subtitle">Lower is better · creatives with leads only</div>
+                                </div>
+                                <div class="chart-wrap tall"><canvas id="mar_asset_cpr"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="charts-container" style="margin-top:1.2rem;">
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <div class="chart-title">📹 Video Completion Funnel</div>
+                                    <div class="chart-subtitle">Drop-off: 25% → 75% → 100% per creative</div>
+                                </div>
+                                <div class="chart-wrap tall"><canvas id="mar_video_funnel"></canvas></div>
+                            </div>
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <div class="chart-title">📊 Spend vs Leads — Creative Level</div>
+                                    <div class="chart-subtitle">Efficiency scatter — bubble size = spend</div>
+                                </div>
+                                <div class="chart-wrap tall"><canvas id="mar_creative_scatter"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Video Funnel Breakdown -->
                     <div style="margin-top:1.5rem;background:rgba(13,13,13,0.6);border:1.5px solid rgba(193,53,132,0.3);border-radius:14px;padding:1.5rem;">
                         <div style="font-size:.8rem;color:#C13584;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">📹 Video Completion Funnel — March 2026</div>
@@ -4160,6 +4235,7 @@
                 </div>
             </div><!-- end meta-oct-feb -->
 
+            <div id="meta-all-detail">
             <!-- ── Monthly Summary Table ── -->
             <div class="table-container" style="margin-top:1.5rem;">
                 <div class="table-header">
@@ -4965,6 +5041,7 @@
                     </div>
                 </div>
             </div>
+            </div><!-- end meta-all-detail -->
         </section>
 
         <!-- ═══════════════════════════════════════════════════════ INSTAGRAM ══ -->
@@ -11187,7 +11264,7 @@
         // ═══════════════════════════════════════════════════════════════════
         // ── Meta view tab switcher ──
         function showMetaView(viewId, btn) {
-            ['meta-all', 'meta-march', 'meta-oct-feb'].forEach(function (id) {
+            ['meta-all', 'meta-march', 'meta-oct-feb', 'meta-all-detail'].forEach(function (id) {
                 var el = document.getElementById(id);
                 if (el) el.style.display = 'none';
             });
@@ -11199,6 +11276,9 @@
             });
             var panel = document.getElementById(viewId);
             if (panel) panel.style.display = 'block';
+            var detail = document.getElementById('meta-all-detail');
+            if (detail) detail.style.display = (viewId === 'meta-all') ? 'block' : 'none';
+            if (viewId === 'meta-march') initMarTabCharts();
             if (btn) {
                 btn.style.background = 'linear-gradient(135deg,#0084FF,#0060CC)';
                 btn.style.border = 'none';
@@ -11402,6 +11482,108 @@
         // ═══════════════════════════════════════════════════════════════════
         // MARCH META CHARTS (updated Mar 1–30 data)
         // ═══════════════════════════════════════════════════════════════════
+        var marTabInit = false;
+        function initMarTabCharts() {
+            if (marTabInit) return;
+            marTabInit = true;
+
+            var camps = ['OMR', 'Choolai', 'Salem', 'ResetOff', 'Cust+Look'];
+            var leads = [104, 114, 61, 80, 24];
+            var spend = [13176.26, 13133.39, 9091.35, 4681.18, 2562.21];
+            var cpr   = [126.69, 115.21, 149.04, 58.51, 106.76];
+            var reach = [204909, 275898, 411015, 150794, 17305];
+            var impr  = [425849, 499858, 1100126, 260038, 23979];
+            var campClrs = ['rgba(234,67,53,0.85)','rgba(0,132,255,0.85)','rgba(52,168,83,0.85)','rgba(155,89,182,0.85)','rgba(255,179,0,0.85)'];
+
+            // Leads by campaign
+            mkChart('mar_leads', {
+                type: 'bar',
+                data: { labels: camps, datasets: [{ label: 'Leads', data: leads, backgroundColor: campClrs, borderRadius: 8 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ' + c.parsed.y + ' leads'; } } }) }, scales: { y: { beginAtZero: true, grid: GRID, ticks: TICK }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } }
+            });
+
+            // CPR colour-coded
+            mkChart('mar_cpr', {
+                type: 'bar',
+                data: { labels: camps, datasets: [{ label: 'CPR (₹)', data: cpr, backgroundColor: cpr.map(function(v){ return v < 80 ? 'rgba(0,200,83,0.85)' : v < 130 ? 'rgba(255,179,0,0.85)' : 'rgba(244,67,54,0.85)'; }), borderRadius: 8 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ₹' + c.parsed.y + ' per lead'; } } }) }, scales: { y: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹' + v; } } }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } }
+            });
+
+            // Spend vs Leads dual-axis
+            mkChart('mar_spend', {
+                type: 'bar',
+                data: { labels: camps, datasets: [
+                    { label: 'Spend (₹)', data: spend, backgroundColor: campClrs.map(function(c){ return c.replace('0.85','0.4'); }), borderRadius: 6, yAxisID: 'yS' },
+                    { label: 'Leads', data: leads, backgroundColor: campClrs, borderRadius: 6, yAxisID: 'yL' }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED' } }, tooltip: { backgroundColor: '#1E2442', padding: 12, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0', callbacks: { label: function(i){ return '  ' + i.dataset.label + ': ' + (i.dataset.label.includes('Spend') ? '₹' + i.raw.toLocaleString() : i.raw); } } } }, scales: { yS: { position: 'left', grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹' + v.toLocaleString(); } } }, yL: { position: 'right', grid: { display: false }, ticks: { color: '#0084FF' } }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } }
+            });
+
+            // Reach vs Impressions
+            mkChart('mar_reach', {
+                type: 'bar',
+                data: { labels: camps, datasets: [
+                    { label: 'Impressions', data: impr, backgroundColor: 'rgba(0,132,255,0.45)', borderRadius: 6 },
+                    { label: 'Reach', data: reach, backgroundColor: 'rgba(0,200,83,0.7)', borderRadius: 6 }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED' } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0' } }, scales: { y: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return v >= 100000 ? (v/100000).toFixed(1)+'L' : v >= 1000 ? (v/1000).toFixed(0)+'K' : v; } } }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } }
+            });
+
+            // Creative charts data
+            var assetNames  = ['Single Image Poster', 'Testimonial-Devaraj', 'Why NextLevel', 'AI Architect', 'Carousel', 'Tamil Voice Over', 'Testimonial Asset', 'Civil Engineer', 'AI Overview', 'Testimonial-Bashyam', 'Testimonial Hasnain'];
+            var assetLeads  = [263, 64, 19, 8, 6, 8, 5, 3, 2, 2, 1];
+            var assetCPR    = [78.97, 131.40, 102.83, 220.35, 623.93, 247.13, 121.69, 330.11, 140.91, 387.93, 81.75];
+            var assetLeadClrs = assetLeads.map(function(v){ return v >= 100 ? 'rgba(0,200,83,0.85)' : v >= 15 ? 'rgba(66,133,244,0.85)' : v >= 5 ? 'rgba(193,53,132,0.75)' : 'rgba(155,89,182,0.65)'; });
+            var assetCPRClrs  = assetCPR.map(function(v){ return v < 100 ? 'rgba(0,200,83,0.85)' : v < 150 ? 'rgba(255,179,0,0.85)' : v < 300 ? 'rgba(232,71,24,0.85)' : 'rgba(244,67,54,0.85)'; });
+
+            // Top creatives by leads (horizontal bar)
+            mkChart('mar_asset_leads', {
+                type: 'bar', indexAxis: 'y',
+                data: { labels: assetNames, datasets: [{ label: 'Leads', data: assetLeads, backgroundColor: assetLeadClrs, borderRadius: 5 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ' + c.parsed.x + ' leads'; } } }) }, scales: { x: { beginAtZero: true, grid: GRID, ticks: TICK }, y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } } } }
+            });
+
+            // CPR by creative (horizontal bar, only those with leads)
+            var cprNames = ['Single Image', 'Hasnain', 'Why NextLevel', 'Testimonial Asset', 'AI Overview', 'Tamil Voice', 'Devaraj', 'AI Architect', 'Civil Eng', 'Bashyam', 'Carousel'];
+            var cprVals  = [78.97, 81.75, 102.83, 121.69, 140.91, 247.13, 131.40, 220.35, 330.11, 387.93, 623.93];
+            mkChart('mar_asset_cpr', {
+                type: 'bar', indexAxis: 'y',
+                data: { labels: cprNames, datasets: [{ label: 'CPR (₹)', data: cprVals, backgroundColor: cprVals.map(function(v){ return v < 100 ? 'rgba(0,200,83,0.85)' : v < 150 ? 'rgba(255,179,0,0.85)' : v < 300 ? 'rgba(232,71,24,0.85)' : 'rgba(244,67,54,0.85)'; }), borderRadius: 5 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function(c){ return ' ₹' + c.parsed.x.toFixed(2); } } }) }, scales: { x: { beginAtZero: true, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹'+v; } } }, y: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } } } }
+            });
+
+            // Video funnel per creative (top 8 by video completions)
+            var funLabels = ['Devaraj', 'Choolai-Img', 'ResetOff-Img', 'Why NextLevel', 'AI Architect', 'Civil Eng Tamil', 'Bashyam', 'Tamil Voice'];
+            var fun25  = [3140, 1638, 1929, 961, 1055, 506, 345, 229];
+            var fun75  = [862, 320, 385, 296, 123, 149, 104, 53];
+            var fun100 = [341, 223, 268, 114, 80, 49, 30, 26];
+            mkChart('mar_video_funnel', {
+                type: 'bar',
+                data: { labels: funLabels, datasets: [
+                    { label: 'Watched 25%', data: fun25, backgroundColor: 'rgba(66,133,244,0.75)', borderRadius: 4 },
+                    { label: 'Watched 75%', data: fun75, backgroundColor: 'rgba(255,179,0,0.8)', borderRadius: 4 },
+                    { label: 'Completed 100%', data: fun100, backgroundColor: 'rgba(0,200,83,0.85)', borderRadius: 4 }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED', font: { size: 11 } } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0' } }, scales: { x: { grid: { display: false }, ticks: { color: '#E8EAED', font: { size: 11 } } }, y: { beginAtZero: true, grid: GRID, ticks: TICK } } }
+            });
+
+            // Spend vs Leads bubble/scatter for creatives
+            mkChart('mar_creative_scatter', {
+                type: 'bubble',
+                data: { datasets: [
+                    { label: 'Single Image', data: [{ x: 263, y: 78.97, r: 18 }], backgroundColor: 'rgba(0,200,83,0.7)' },
+                    { label: 'Devaraj', data: [{ x: 64, y: 131.40, r: 12 }], backgroundColor: 'rgba(66,133,244,0.7)' },
+                    { label: 'Why NextLevel', data: [{ x: 19, y: 102.83, r: 8 }], backgroundColor: 'rgba(0,132,255,0.7)' },
+                    { label: 'AI Architect', data: [{ x: 8, y: 220.35, r: 7 }], backgroundColor: 'rgba(255,179,0,0.7)' },
+                    { label: 'Carousel', data: [{ x: 6, y: 623.93, r: 10 }], backgroundColor: 'rgba(244,67,54,0.7)' },
+                    { label: 'ResetOff', data: [{ x: 80, y: 58.51, r: 9 }], backgroundColor: 'rgba(0,217,192,0.7)' },
+                    { label: 'Tamil Voice', data: [{ x: 8, y: 247.13, r: 6 }], backgroundColor: 'rgba(193,53,132,0.7)' },
+                    { label: 'Civil Eng', data: [{ x: 3, y: 330.11, r: 6 }], backgroundColor: 'rgba(155,89,182,0.7)' }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: '#E8EAED', font: { size: 10 }, boxWidth: 10 } }, tooltip: { backgroundColor: '#1E2442', padding: 10, borderColor: '#2D3748', borderWidth: 1, titleColor: '#E8EAED', bodyColor: '#A0AEC0', callbacks: { label: function(c){ return c.dataset.label + ': ' + c.raw.x + ' leads @ ₹' + c.raw.y + ' CPR'; } } } }, scales: { x: { title: { display: true, text: 'Leads Generated', color: '#A0AEC0' }, grid: GRID, ticks: TICK }, y: { title: { display: true, text: 'Cost Per Result (₹)', color: '#A0AEC0' }, grid: GRID, ticks: { color: '#A0AEC0', callback: function(v){ return '₹'+v; } } } } }
+            });
+        }
+
         var marchMetaInit = false;
         function initMarchMetaCharts() {
             var labelsShort = ['OMR', 'Choolai', 'Salem', 'ResetOff', 'Cust+Look'];
