@@ -4057,95 +4057,18 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- June Google Charts -->
+                <div class="charts-container" style="margin:1.5rem 0;padding:0 1.5rem;">
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">📱 Device Split — June 2026</div></div><div class="chart-donut-wrap"><canvas id="junDeviceDonut"></canvas></div></div>
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">🌐 Network Performance — June 2026</div></div><div class="chart-wrap"><canvas id="junNetworkChart"></canvas></div></div>
+                </div>
+                <div class="charts-container" style="margin:0 0 1.5rem;padding:0 1.5rem;">
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">👥 Age Demographics — June 2026</div></div><div class="chart-wrap"><canvas id="junAgeChart"></canvas></div></div>
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">🎯 Optimization Score by Campaign — June 2026</div></div><div class="chart-wrap"><canvas id="junOptScoreChart"></canvas></div></div>
+                </div>
             </div>
 
-                <!-- ── May vs June Comparison ── -->
-                <h2 class="insights-title" style="border-left:4px solid #4285F4;padding-left:1rem;margin:2rem 0 1.2rem;">📊 May vs June Comparison</h2>
-                <div class="table-container" style="margin-bottom:1.5rem;">
-                    <div class="table-header">
-                        <div class="table-title">📅 Google Ads — May 2026 vs June 2026 (Full Months)</div>
-                    </div>
-                    <div style="overflow-x:auto;">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Metric</th>
-                                    <th>May 2026</th>
-                                    <th>June 2026</th>
-                                    <th>Change</th>
-                                    <th>Signal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="highlight">Total Spend (ex-GST)</td>
-                                    <td>₹35,406</td>
-                                    <td>₹26,648</td>
-                                    <td style="color:#00C853;">−24.7%</td>
-                                    <td><span class="metric-badge badge-good">Leaner spend</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Total Clicks</td>
-                                    <td>12,569</td>
-                                    <td>11,445</td>
-                                    <td style="color:#FFB300;">−8.9%</td>
-                                    <td><span class="metric-badge badge-average">Slight dip</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Search Spend / Clicks</td>
-                                    <td>₹14,423 / 3,706</td>
-                                    <td>₹6,993 / 3,035</td>
-                                    <td style="color:#00C853;">−51.5% spend</td>
-                                    <td><span class="metric-badge badge-excellent">✅ Search CTR up to 7.58%</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">PMax Spend / Clicks</td>
-                                    <td>₹20,983 / 8,863</td>
-                                    <td>₹19,656 / 8,410</td>
-                                    <td style="color:#FFB300;">−6.3% spend</td>
-                                    <td><span class="metric-badge badge-good">Steady</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">PMax Store-Visit Conv.</td>
-                                    <td>6,221</td>
-                                    <td style="color:#F44336;font-weight:700;">307*</td>
-                                    <td style="color:#F44336;">−95.1%</td>
-                                    <td><span class="metric-badge badge-poor">⚠ See note</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Cost / Store-Visit Conv.</td>
-                                    <td>₹3.37</td>
-                                    <td style="color:#F44336;font-weight:700;">₹64.03*</td>
-                                    <td style="color:#F44336;">+1,800%</td>
-                                    <td><span class="metric-badge badge-poor">⚠ See note</span></td>
-                                </tr>
-                                <tr style="font-weight:700;background:rgba(66,133,244,.08);">
-                                    <td class="highlight">📊 Net Read</td>
-                                    <td colspan="4" style="color:#00D9C0;">*Store-visit conversions are modeled by Google from anonymized location history and backfill for 1–3 weeks after the fact. June's report was pulled Jul 2 — just 2 days after month-end — so 307 is very likely a severe undercount, not a real collapse. Re-pull this report in mid-July for the true June figure before reacting to it.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Comparison insights + Action Plan -->
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:1rem;">
-                    <div style="background:rgba(0,200,83,0.06);border:1px solid rgba(0,200,83,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#00C853;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">✅ What Worked</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">Search CTR hit an all-time high — 7.58%</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">Up from 3.86% in April and roughly double May's rate, on 51.5% less Search spend. The account is getting more clicks per rupee than at any point on record.</div>
-                    </div>
-                    <div style="background:rgba(255,179,0,0.06);border:1px solid rgba(255,179,0,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#FFB300;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">⏳ What to Verify</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">Confirm real June store-visit numbers</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">Don't cut PMax budget based on the 307 figure — it's a reporting-lag artifact, not a performance drop. Clicks and spend for PMax barely moved (−5% to −6%), which is the more reliable signal for June.</div>
-                    </div>
-                    <div style="background:rgba(251,188,4,0.06);border:1px solid rgba(251,188,4,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#FBBC04;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">💡 Action Plan for July</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">Re-invest Search savings into PMax budgets</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">Search is now over-delivering on efficiency (7.58% CTR) with room to spare — shift some of the ₹7,400 saved back into the two budget-limited PMax campaigns (Choolai, Rest of Locations) to push Get Directions volume back up. Re-check the true June store-visit figure in mid-July before making PMax budget cuts.</div>
-                    </div>
-                </div>
             </div>
 
 
@@ -5164,11 +5087,98 @@
                     <h2 class="insights-title" style="border-left:4px solid #0084FF;padding-left:1rem;margin-bottom:.3rem;">📅 June 2026 — Full Month</h2>
                     <p style="font-size:.82rem;color:#A0AEC0;">Jun 1 – Jun 30 · 30 Days · Data verified from Meta Ads Manager export</p>
                 </div>
+
+                <!-- June Meta KPI Cards (6-card layout, matching April/May format) -->
                 <div class="metrics-grid">
-                    <div class="metric-card" style="border-color:rgba(0,132,255,0.4);"><div class="metric-header"><div class="metric-icon" style="background:linear-gradient(135deg,#0084FF,#0060CC);">💵</div><span class="metric-badge badge-good">Spend</span></div><div class="metric-label">June Total</div><div class="metric-value">₹48,840</div><div class="metric-change">9 campaigns w/ spend · Jun 1–30</div></div>
-                    <div class="metric-card" style="border-color:rgba(0,200,83,0.4);"><div class="metric-header"><div class="metric-icon" style="background:linear-gradient(135deg,#00C853,#00A040);">💬</div><span class="metric-badge badge-good">Leads</span></div><div class="metric-label">WhatsApp Conversations</div><div class="metric-value">635</div><div class="metric-change">₹76.91 blended CPR · 2nd best month</div></div>
-                    <div class="metric-card" style="border-color:rgba(255,179,0,0.4);"><div class="metric-header"><div class="metric-icon" style="background:linear-gradient(135deg,#FFB300,#E65100);">💰</div><span class="metric-badge badge-excellent">CPR</span></div><div class="metric-label">Cost Per Result</div><div class="metric-value">₹76.91</div><div class="metric-change">Best: ResetOff (07-Apr) ₹44.17</div></div>
-                    <div class="metric-card" style="border-color:rgba(193,53,132,0.4);"><div class="metric-header"><div class="metric-icon" style="background:linear-gradient(135deg,#C13584,#833AB4);">👁️</div><span class="metric-badge badge-average">Reach</span></div><div class="metric-label">Total Reach</div><div class="metric-value">3.62L</div><div class="metric-change">361,619 unique people · down from May</div></div>
+                    <div class="metric-card" style="border-color:rgba(0,132,255,0.4);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#0084FF,#0060CC);">💵</div>
+                            <span class="metric-badge" style="background:rgba(0,132,255,0.15);color:#0084FF;">Jun Spend</span>
+                        </div>
+                        <div class="metric-label">Meta Total Investment</div>
+                        <div class="metric-value">₹48,840</div>
+                        <div class="metric-change">Jun 1–30 · 9 campaigns tracked</div>
+                    </div>
+                    <div class="metric-card" style="border-color:rgba(0,200,83,0.4);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#00C853,#00A040);">💬</div>
+                            <span class="metric-badge badge-excellent">Leads</span>
+                        </div>
+                        <div class="metric-label">WhatsApp Conversations</div>
+                        <div class="metric-value">635</div>
+                        <div class="metric-change">All campaigns · Jun 1–30 · −0.9% vs May</div>
+                    </div>
+                    <div class="metric-card" style="border-color:rgba(255,179,0,0.4);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#FFB300,#E65100);">💰</div>
+                            <span class="metric-badge badge-good">Avg CPR</span>
+                        </div>
+                        <div class="metric-label">Cost Per Result (Blended)</div>
+                        <div class="metric-value">₹76.91</div>
+                        <div class="metric-change">Best: ResetOff (07-Apr) ₹44.17 · Worst: Salem (12-Jun) ₹136.75</div>
+                    </div>
+                    <div class="metric-card" style="border-color:rgba(193,53,132,0.3);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#C13584,#833AB4);">👁️</div>
+                            <span class="metric-badge badge-average">Reach</span>
+                        </div>
+                        <div class="metric-label">Total Reach</div>
+                        <div class="metric-value">3.62L</div>
+                        <div class="metric-change">361,619 unique people</div>
+                    </div>
+                    <div class="metric-card" style="border-color:rgba(155,89,182,0.3);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#9B59B6,#6C3483);">📊</div>
+                            <span class="metric-badge badge-excellent">Impressions</span>
+                        </div>
+                        <div class="metric-label">Total Impressions</div>
+                        <div class="metric-value">6.89L</div>
+                        <div class="metric-change">688,753 across all campaigns</div>
+                    </div>
+                    <div class="metric-card" style="border-color:rgba(0,200,83,0.3);">
+                        <div class="metric-header">
+                            <div class="metric-icon" style="background:linear-gradient(135deg,#00C853,#00796B);">🟢</div>
+                            <span class="metric-badge badge-excellent">Active</span>
+                        </div>
+                        <div class="metric-label">Currently Active Campaigns</div>
+                        <div class="metric-value">5</div>
+                        <div class="metric-change">Choolai · OMR · Salem · Cust+Look · Rest Off</div>
+                    </div>
+                </div>
+
+                <!-- Active Campaigns Banner Row -->
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;color:#A0AEC0;text-transform:uppercase;letter-spacing:.8px;margin:1.5rem 0 .75rem;">Active Campaigns — Jun 1–30 (Live at Month-End)</div>
+                <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:140px;background:linear-gradient(135deg,rgba(0,132,255,0.15),rgba(0,132,255,0.04));border:1.5px solid #0084FF;border-radius:12px;padding:1rem 1.2rem;">
+                        <div style="font-size:.7rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem;">🏢 Choolai (10-Jun)</div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#0084FF;">118 <span style="font-size:.78rem;color:#A0AEC0;">leads</span></div>
+                        <div style="font-size:.75rem;color:#A0AEC0;margin-top:.2rem;">₹8,661 · ₹73.39 CPR</div>
+                        <div style="font-size:.7rem;color:#00C853;margin-top:.2rem;">Highest spend, strong volume</div>
+                    </div>
+                    <div style="flex:1;min-width:140px;background:linear-gradient(135deg,rgba(234,67,53,0.15),rgba(234,67,53,0.04));border:1.5px solid #EA4335;border-radius:12px;padding:1rem 1.2rem;">
+                        <div style="font-size:.7rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem;">🌆 OMR (12-Jun)</div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#EA4335;">69 <span style="font-size:.78rem;color:#A0AEC0;">leads</span></div>
+                        <div style="font-size:.75rem;color:#A0AEC0;margin-top:.2rem;">₹7,871 · ₹114.07 CPR</div>
+                        <div style="font-size:.7rem;color:#FFB300;margin-top:.2rem;">Above blended average</div>
+                    </div>
+                    <div style="flex:1;min-width:140px;background:linear-gradient(135deg,rgba(0,200,83,0.15),rgba(0,200,83,0.04));border:1.5px solid #00C853;border-radius:12px;padding:1rem 1.2rem;">
+                        <div style="font-size:.7rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem;">📍 Rest Off (15-Jun)</div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#00C853;">26 <span style="font-size:.78rem;color:#A0AEC0;">leads</span></div>
+                        <div style="font-size:.75rem;color:#A0AEC0;margin-top:.2rem;">₹2,399 · ₹92.26 CPR</div>
+                        <div style="font-size:.7rem;color:#00C853;margin-top:.2rem;">Smallest budget, on track</div>
+                    </div>
+                    <div style="flex:1;min-width:140px;background:linear-gradient(135deg,rgba(251,188,4,0.15),rgba(251,188,4,0.04));border:1.5px solid #FBBC04;border-radius:12px;padding:1rem 1.2rem;">
+                        <div style="font-size:.7rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem;">🏙️ Salem (12-Jun) <span style="color:#F44336;font-size:.62rem;">⚠ Worst CPR</span></div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#FBBC04;">57 <span style="font-size:.78rem;color:#A0AEC0;">leads</span></div>
+                        <div style="font-size:.75rem;color:#A0AEC0;margin-top:.2rem;">₹7,795 · ₹136.75 CPR</div>
+                        <div style="font-size:.7rem;color:#F44336;margin-top:.2rem;">Review targeting/creative</div>
+                    </div>
+                    <div style="flex:1;min-width:140px;background:linear-gradient(135deg,rgba(155,89,182,0.15),rgba(155,89,182,0.04));border:1.5px solid #9B59B6;border-radius:12px;padding:1rem 1.2rem;">
+                        <div style="font-size:.7rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem;">🎯 Cust+Look (07-Apr) <span style="color:#00C853;font-size:.62rem;">★ Best CPR</span></div>
+                        <div style="font-size:1.5rem;font-weight:800;color:#9B59B6;">134 <span style="font-size:.78rem;color:#A0AEC0;">leads</span></div>
+                        <div style="font-size:.75rem;color:#A0AEC0;margin-top:.2rem;">₹7,237 · ₹54.01 CPR</div>
+                        <div style="font-size:.7rem;color:#00C853;margin-top:.2rem;">⭐ Most leads · most efficient</div>
+                    </div>
                 </div>
             <!-- META ADS SECTION -->
             <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;margin-bottom:1.5rem;overflow:hidden;">
@@ -5228,79 +5238,16 @@
                 </div>
             </div>
 
-                <!-- ── May vs June Comparison ── -->
-                <h2 class="insights-title" style="border-left:4px solid #0084FF;padding-left:1rem;margin:2rem 0 1.2rem;">📊 May vs June Comparison</h2>
-                <div class="table-container" style="margin-bottom:1.5rem;">
-                    <div class="table-header">
-                        <div class="table-title">📅 Meta Ads — May 2026 vs June 2026 (Full Months)</div>
-                    </div>
-                    <div style="overflow-x:auto;">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Metric</th>
-                                    <th>May 2026</th>
-                                    <th>June 2026</th>
-                                    <th>Change</th>
-                                    <th>Signal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="highlight">Spend (ex-GST)</td>
-                                    <td>₹52,368</td>
-                                    <td>₹48,840</td>
-                                    <td style="color:#00C853;">−6.7%</td>
-                                    <td><span class="metric-badge badge-good">Leaner spend</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Leads (WhatsApp)</td>
-                                    <td>641</td>
-                                    <td>635</td>
-                                    <td style="color:#FFB300;">−0.9%</td>
-                                    <td><span class="metric-badge badge-good">Stable</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Avg Cost Per Result</td>
-                                    <td>₹81.70</td>
-                                    <td style="color:#00C853;font-weight:700;">₹76.91</td>
-                                    <td style="color:#00C853;">−5.9%</td>
-                                    <td><span class="metric-badge badge-excellent">✅ Improved</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">Total Reach</td>
-                                    <td>15.30L</td>
-                                    <td style="color:#F44336;font-weight:700;">3.62L</td>
-                                    <td style="color:#F44336;">−76.4%</td>
-                                    <td><span class="metric-badge badge-poor">⚠ Needs attention</span></td>
-                                </tr>
-                                <tr style="font-weight:700;background:rgba(0,132,255,.08);">
-                                    <td class="highlight">📊 Net Read</td>
-                                    <td colspan="4" style="color:#00D9C0;">Held leads nearly flat on 6.7% less spend and improved CPR — but reach collapsed because 5 of the 9 spending campaigns were legacy April campaigns that had already stopped delivering by June, leaving fewer live campaigns to actually reach new audiences.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- Meta June Charts -->
+                <div class="charts-container" style="margin-bottom:2rem;">
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">💬 Leads by Campaign — June 2026</div></div><div class="chart-wrap"><canvas id="junMetaLeadsChartTab"></canvas></div></div>
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">💰 Cost Per Result (₹)</div><span style="font-size:.7rem;color:#A0AEC0;">Green &lt;₹100 · Amber &lt;₹200 · Red ≥₹200</span></div><div class="chart-wrap"><canvas id="junMetaCPRChartTab"></canvas></div></div>
+                </div>
+                <div class="charts-container" style="margin-bottom:2rem;">
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">📊 Spend vs Leads — Active</div></div><div class="chart-wrap"><canvas id="junMetaSpendLeadsTab"></canvas></div></div>
+                    <div class="chart-card"><div class="chart-header"><div class="chart-title">👁️ Reach by Campaign (Active)</div></div><div class="chart-donut-wrap"><canvas id="junMetaReachDonutTab"></canvas></div></div>
                 </div>
 
-                <!-- Comparison insights + Action Plan -->
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:2rem;">
-                    <div style="background:rgba(0,200,83,0.06);border:1px solid rgba(0,200,83,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#00C853;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">✅ What Worked</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">CPR improved for the 2nd month running</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">₹81.70 (May) → ₹76.91 (June). The 4 June-launched campaigns (Choolai 10-Jun, OMR 12-Jun, Salem 12-Jun, Rest Off 15-Jun) are now past learning phase and pulling the blended CPR down.</div>
-                    </div>
-                    <div style="background:rgba(244,67,54,0.06);border:1px solid rgba(244,67,54,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#F44336;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">⚠ What Needs Fixing</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">Reach dropped 76% month-on-month</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">May ran 5 fresh campaigns for all 31 days. June's spend was split across 9 campaigns, but 4 legacy April ones were only active for part of the month before pausing — shrinking total delivered reach even though leads held up.</div>
-                    </div>
-                    <div style="background:rgba(251,188,4,0.06);border:1px solid rgba(251,188,4,0.3);border-radius:12px;padding:1.2rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#FBBC04;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.5rem;">💡 Action Plan for July</div>
-                        <div style="font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem;">Consolidate budget into the 4 proven June campaigns</div>
-                        <div style="font-size:.85rem;color:#A0AEC0;">Fully retire the paused April-legacy ad sets and shift their budget share into Choolai (10-Jun) and Cust+Lookalike (07-Apr) — the two lowest-CPR performers — to rebuild reach without losing this month's CPR gains.</div>
-                    </div>
-                </div>
             </div>
 
 
@@ -10355,7 +10302,6 @@
                 <button class="seo-btn" data-panel="seo-s2">🔧 Site Audit</button>
                 <button class="seo-btn" data-panel="seo-s3">🔗 Backlinks</button>
                 <button class="seo-btn" data-panel="seo-s4">☣️ Toxicity</button>
-                <button class="seo-btn" data-panel="seo-s5">✅ Fix Checklist</button>
             </div>
 
             <!-- ── Panel 1: Overview ── -->
@@ -10510,23 +10456,23 @@
                 <div class="seo-kpi-row">
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Organic Traffic</div>
-                        <div class="seo-kpi-val">2,289</div>
-                        <div class="seo-kpi-sub">visits/month</div>
+                        <div class="seo-kpi-val">11.9K</div>
+                        <div class="seo-kpi-sub">+0.5% · visits/month</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Organic Keywords</div>
-                        <div class="seo-kpi-val">1,226</div>
-                        <div class="seo-kpi-sub">ranking keywords</div>
+                        <div class="seo-kpi-val">2.3K</div>
+                        <div class="seo-kpi-sub">+0.3% · ranking keywords</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Total Backlinks</div>
-                        <div class="seo-kpi-val">2,900</div>
-                        <div class="seo-kpi-sub">from 72 referring domains</div>
+                        <div class="seo-kpi-val">5.9K</div>
+                        <div class="seo-kpi-sub">from 91 referring domains</div>
                     </div>
                     <div class="seo-kpi">
-                        <div class="seo-kpi-label">Site Issues</div>
-                        <div class="seo-kpi-val">345</div>
-                        <div class="seo-kpi-sub">0 errors · 345 warnings</div>
+                        <div class="seo-kpi-label">Monthly Visits</div>
+                        <div class="seo-kpi-val">29.7K</div>
+                        <div class="seo-kpi-sub">Toxicity Score: 4 (Low)</div>
                     </div>
                 </div>
             </div>
@@ -10708,47 +10654,47 @@
                 <div style="background:linear-gradient(135deg,rgba(0,200,83,0.12),rgba(0,200,83,0.04));border:2px solid rgba(0,200,83,0.4);border-radius:12px;padding:.9rem 1.2rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
                     <span style="font-size:1.1rem;">🗓️</span>
                     <div style="flex:1;min-width:180px;">
-                        <div style="font-size:.8rem;font-weight:700;color:#00C853;letter-spacing:.5px;">JUN 19, 2026 — LATEST DATA ✅</div>
-                        <div style="font-size:.72rem;color:#A0AEC0;">Semrush Backlink Audit · Last updated: Fri, Jun 19, 2026 · nextleveldecor.in</div>
+                        <div style="font-size:.8rem;font-weight:700;color:#00C853;letter-spacing:.5px;">JUL 2, 2026 — LATEST DATA ✅</div>
+                        <div style="font-size:.72rem;color:#A0AEC0;">Semrush Backlink Audit · Last updated: Thu, Jul 2, 2026 · nextleveldecor.in</div>
                     </div>
                     <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
-                        <span style="background:rgba(0,200,83,0.12);border:1px solid rgba(0,200,83,0.35);color:#00C853;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">2.9K Backlinks · 97.1% follow</span>
-                        <span style="background:rgba(66,133,244,0.12);border:1px solid rgba(66,133,244,0.35);color:#4285F4;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">72 Referring Domains</span>
-                        <span style="background:rgba(251,188,4,0.12);border:1px solid rgba(251,188,4,0.35);color:#FBBC04;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">Authority Score: 13</span>
+                        <span style="background:rgba(0,200,83,0.12);border:1px solid rgba(0,200,83,0.35);color:#00C853;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">5.9K Backlinks · 98% follow</span>
+                        <span style="background:rgba(66,133,244,0.12);border:1px solid rgba(66,133,244,0.35);color:#4285F4;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">91 Referring Domains</span>
+                        <span style="background:rgba(251,188,4,0.12);border:1px solid rgba(251,188,4,0.35);color:#FBBC04;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">Authority Score: 13 (Fine)</span>
                     </div>
                 </div>
 
-                <!-- KPI Row — Jun 19, 2026 verified figures -->
+                <!-- KPI Row — Jul 2, 2026 verified figures -->
                 <div class="seo-kpi-row">
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Total Backlinks</div>
-                        <div class="seo-kpi-val" style="color:#9B59B6;">2.9K</div>
-                        <div class="seo-kpi-sub">97.1% follow · 2.9% nofollow</div>
+                        <div class="seo-kpi-val" style="color:#9B59B6;">5.9K</div>
+                        <div class="seo-kpi-sub">−2% vs last month</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Referring Domains</div>
-                        <div class="seo-kpi-val" style="color:#9B59B6;">72</div>
-                        <div class="seo-kpi-sub">63.9% follow · New: 10 · Lost: 14</div>
+                        <div class="seo-kpi-val" style="color:#9B59B6;">91</div>
+                        <div class="seo-kpi-sub">0% vs last month · steady</div>
                     </div>
                     <div class="seo-kpi">
-                        <div class="seo-kpi-label">New Backlinks</div>
-                        <div class="seo-kpi-val" style="color:#00C853;">1,265</div>
-                        <div class="seo-kpi-sub">Gained since last audit</div>
+                        <div class="seo-kpi-label">Ref. IPs</div>
+                        <div class="seo-kpi-val" style="color:#0084FF;">100</div>
+                        <div class="seo-kpi-sub">Ref. Subnets: 84</div>
                     </div>
                     <div class="seo-kpi">
-                        <div class="seo-kpi-label">Lost Backlinks</div>
-                        <div class="seo-kpi-val" style="color:#F44336;">687</div>
-                        <div class="seo-kpi-sub">Broken: 107 · Lost: 687</div>
+                        <div class="seo-kpi-label">Outbound Domains</div>
+                        <div class="seo-kpi-val" style="color:#FFB300;">4</div>
+                        <div class="seo-kpi-sub">Overall Toxicity: 4 (Low)</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Follow Links</div>
-                        <div class="seo-kpi-val" style="color:#00C853;">2,862</div>
-                        <div class="seo-kpi-sub">97.1% · Nofollow: 85 (2.9%)</div>
+                        <div class="seo-kpi-val" style="color:#00C853;">5.7K</div>
+                        <div class="seo-kpi-sub">98% · Nofollow: 140 (2%)</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Authority Score</div>
                         <div class="seo-kpi-val" style="color:#4285F4;">13</div>
-                        <div class="seo-kpi-sub">↑ up from 11 · was 0 in Oct 2025</div>
+                        <div class="seo-kpi-sub">"Fine" rating · Monthly visits 29.7K</div>
                     </div>
                 </div>
 
@@ -10785,35 +10731,30 @@
                         </div>
                     </div>
                     <div class="seo-chart-box">
-                        <div class="seo-chart-title">Domains by Authority Score <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jun 19, 2026</span></div>
+                        <div class="seo-chart-title">Domains by Authority Score <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jul 2, 2026</span></div>
                         <div style="display:flex;flex-direction:column;gap:.55rem;margin-top:.8rem;">
                             <div style="display:flex;align-items:center;gap:.8rem;">
                                 <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">81–100</span>
-                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:4.2%;height:100%;background:#00C853;border-radius:5px;"></div></div>
-                                <span style="font-size:.78rem;color:#00C853;font-weight:700;width:75px;text-align:right;">4.2% · 3 dom</span>
-                            </div>
-                            <div style="display:flex;align-items:center;gap:.8rem;">
-                                <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">61–80</span>
-                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:0%;height:100%;background:#00C853;border-radius:5px;"></div></div>
-                                <span style="font-size:.78rem;color:#A0AEC0;font-weight:700;width:75px;text-align:right;">0% · 0 dom</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:2%;height:100%;background:#00C853;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#00C853;font-weight:700;width:75px;text-align:right;">2% · 2 dom</span>
                             </div>
                             <div style="display:flex;align-items:center;gap:.8rem;">
                                 <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">41–60</span>
-                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:1.4%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
-                                <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:75px;text-align:right;">1.4% · 1 dom</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:2%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:75px;text-align:right;">2% · 2 dom</span>
                             </div>
                             <div style="display:flex;align-items:center;gap:.8rem;">
                                 <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">21–40</span>
-                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:16.7%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
-                                <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:75px;text-align:right;">16.7% · 12 dom</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:22%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:75px;text-align:right;">22% · 20 dom</span>
                             </div>
                             <div style="display:flex;align-items:center;gap:.8rem;">
                                 <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">0–20</span>
-                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:77.8%;height:100%;background:#F44336;border-radius:5px;"></div></div>
-                                <span style="font-size:.78rem;color:#F44336;font-weight:700;width:75px;text-align:right;">77.8% · 56 dom</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:74%;height:100%;background:#F44336;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#F44336;font-weight:700;width:75px;text-align:right;">74% · 67 dom</span>
                             </div>
                         </div>
-                        <div style="font-size:.73rem;color:#A0AEC0;margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--border);">77.8% of linking domains have very low authority (0–20) — mostly directories. Priority: build quality links from higher-AS domains.</div>
+                        <div style="font-size:.73rem;color:#A0AEC0;margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--border);">74% of referring domains sit at Authority Score 0–20 (mostly directories). No domains in the 61–80 or 91–100 brackets. Priority: build quality links from higher-AS domains.</div>
                     </div>
                 </div>
 
@@ -10847,40 +10788,40 @@
                                 <div style="font-size:.7rem;color:#A0AEC0;margin-top:.2rem;">Organic</div>
                                 <div style="font-size:.67rem;color:#718096;">5 links</div>
                             </div>
-                            <div style="background:rgba(244,67,54,0.07);border-radius:8px;padding:.75rem;text-align:center;">
-                                <div style="font-size:1rem;font-weight:800;color:#F44336;">0%</div>
-                                <div style="font-size:.7rem;color:#A0AEC0;margin-top:.2rem;">Money</div>
-                                <div style="font-size:.67rem;color:#718096;">0 links</div>
-                            </div>
                         </div>
                     </div>
                     <div class="seo-chart-box">
-                        <div class="seo-chart-title">Link Attributes &amp; Types <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jun 19, 2026</span></div>
+                        <div class="seo-chart-title">Link Attributes &amp; Types <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jul 2, 2026</span></div>
                         <div style="display:flex;flex-direction:column;gap:.6rem;margin-top:.8rem;">
                             <div style="background:rgba(0,0,0,0.2);border-radius:10px;padding:.9rem 1rem;">
                                 <div style="font-size:.68rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.6px;margin-bottom:.5rem;">Link Attributes</div>
                                 <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem;">
                                     <span style="font-size:.8rem;color:#E8EAED;width:80px;">Follow</span>
-                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:97.1%;height:100%;background:#00C853;border-radius:4px;"></div></div>
-                                    <span style="font-size:.78rem;color:#00C853;font-weight:700;">97.1% · 2,862</span>
+                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:98%;height:100%;background:#00C853;border-radius:4px;"></div></div>
+                                    <span style="font-size:.78rem;color:#00C853;font-weight:700;">98% · 5.7K</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem;">
+                                    <span style="font-size:.8rem;color:#E8EAED;width:80px;">Nofollow</span>
+                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:2%;height:100%;background:#F44336;border-radius:4px;"></div></div>
+                                    <span style="font-size:.78rem;color:#F44336;font-weight:700;">2% · 140</span>
                                 </div>
                                 <div style="display:flex;align-items:center;gap:.7rem;">
-                                    <span style="font-size:.8rem;color:#E8EAED;width:80px;">Nofollow</span>
-                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:2.9%;height:100%;background:#F44336;border-radius:4px;"></div></div>
-                                    <span style="font-size:.78rem;color:#F44336;font-weight:700;">2.9% · 85</span>
+                                    <span style="font-size:.8rem;color:#E8EAED;width:80px;">UGC</span>
+                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:1%;height:100%;background:#9B59B6;border-radius:4px;"></div></div>
+                                    <span style="font-size:.78rem;color:#9B59B6;font-weight:700;">&lt;1% · 1</span>
                                 </div>
                             </div>
                             <div style="background:rgba(0,0,0,0.2);border-radius:10px;padding:.9rem 1rem;">
                                 <div style="font-size:.68rem;color:#A0AEC0;text-transform:uppercase;letter-spacing:.6px;margin-bottom:.5rem;">Link Types</div>
                                 <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem;">
                                     <span style="font-size:.8rem;color:#E8EAED;width:80px;">Text</span>
-                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:99.7%;height:100%;background:#4285F4;border-radius:4px;"></div></div>
-                                    <span style="font-size:.78rem;color:#4285F4;font-weight:700;">99.7% · 2,939</span>
+                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:92%;height:100%;background:#4285F4;border-radius:4px;"></div></div>
+                                    <span style="font-size:.78rem;color:#4285F4;font-weight:700;">92% · 5.4K</span>
                                 </div>
                                 <div style="display:flex;align-items:center;gap:.7rem;">
                                     <span style="font-size:.8rem;color:#E8EAED;width:80px;">Image</span>
-                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:0.3%;height:100%;background:#FFB300;border-radius:4px;"></div></div>
-                                    <span style="font-size:.78rem;color:#FFB300;font-weight:700;">0.3% · 8</span>
+                                    <div style="flex:1;height:8px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;"><div style="width:8%;height:100%;background:#FFB300;border-radius:4px;"></div></div>
+                                    <span style="font-size:.78rem;color:#FFB300;font-weight:700;">8% · 482</span>
                                 </div>
                             </div>
                         </div>
@@ -10966,9 +10907,9 @@
                     </div>
                 </div>
 
-                <!-- Top 5 Target Pages Table — Jun 19, 2026 -->
+                <!-- Top Target Pages Table — Jul 2, 2026 -->
                 <div style="margin-bottom:1.5rem;">
-                    <div class="seo-chart-title" style="margin-bottom:.8rem;">📄 Top Target Pages by Backlinks <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;margin-left:.4rem;">Jun 19, 2026</span></div>
+                    <div class="seo-chart-title" style="margin-bottom:.8rem;">📄 Top Target Pages by Backlinks <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;margin-left:.4rem;">Jul 2, 2026</span></div>
                     <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
                         <table class="seo-table" style="min-width:500px;">
                             <thead>
@@ -10982,36 +10923,92 @@
                             <tbody>
                                 <tr style="background:rgba(0,200,83,0.04);">
                                     <td class="highlight" style="color:#00C853;">https://nextleveldecor.in/ (homepage)</td>
-                                    <td><strong style="color:#00C853;">65 (90.3%)</strong></td>
-                                    <td><strong style="color:#00C853;">2,803 (95.1%)</strong></td>
+                                    <td><strong style="color:#00C853;">79</strong></td>
+                                    <td><strong style="color:#00C853;">5,434</strong></td>
                                     <td><span class="seo-badge green">✅ Primary page</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="highlight">http://nextleveldecor.in/ (HTTP)</td>
-                                    <td>4 (5.6%)</td>
-                                    <td>5 (0.2%)</td>
+                                    <td class="highlight">http://www.nextleveldecor.in/ (www, HTTP)</td>
+                                    <td>1</td>
+                                    <td>1</td>
                                     <td><span class="seo-badge red">⚠ Redirect to HTTPS</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="highlight">/pages/laminates-collections</td>
-                                    <td>2 (2.8%)</td>
-                                    <td>20 (0.7%)</td>
+                                    <td class="highlight">/products/axilam-chalkers-and-marker…</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                    <td><span class="seo-badge yellow">Product page</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight">https://www.nextleveldecor.in/ (www)</td>
+                                    <td>1</td>
+                                    <td>1</td>
                                     <td><span class="seo-badge yellow">Build more links</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="highlight">/products/allure5-5555-designer-louve…</td>
-                                    <td>2 (2.8%)</td>
-                                    <td>&lt;0.1%</td>
-                                    <td><span class="seo-badge yellow">Product page</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="highlight">/products/axilam-axi-choco-walnut-8×4-…</td>
-                                    <td>1 (1.4%)</td>
-                                    <td>4 (0.1%)</td>
-                                    <td><span class="seo-badge yellow">Product page</span></td>
+                                    <td class="highlight" style="color:#F44336;">https://nextleveldecor.in/404</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><span class="seo-badge red">404 Not Found</span></td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <!-- TLD Distribution + Top Countries — Jul 2, 2026 -->
+                <div class="seo-charts-2" style="margin-bottom:1.5rem;">
+                    <div class="seo-chart-box">
+                        <div class="seo-chart-title">TLD Distribution <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jul 2, 2026</span></div>
+                        <div style="display:flex;flex-direction:column;gap:.55rem;margin-top:.8rem;">
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">.com</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:79%;height:100%;background:#4285F4;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#4285F4;font-weight:700;width:75px;text-align:right;">79% · 72 dom</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">.net</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:7%;height:100%;background:#00C853;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#00C853;font-weight:700;width:75px;text-align:right;">7% · 6 dom</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:50px;flex-shrink:0;">.org</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:3%;height:100%;background:#FBBC04;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#FBBC04;font-weight:700;width:75px;text-align:right;">3% · 3 dom</span>
+                            </div>
+                        </div>
+                        <div style="font-size:.73rem;color:#A0AEC0;margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--border);">89% of referring domains sit on .com/.net/.org — no .gov or .edu links yet, a gap for future authority-building outreach.</div>
+                    </div>
+                    <div class="seo-chart-box">
+                        <div class="seo-chart-title">Top Countries (Referring Domains) <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jul 2, 2026</span></div>
+                        <div style="display:flex;flex-direction:column;gap:.55rem;margin-top:.8rem;">
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:90px;flex-shrink:0;">United States</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:26%;height:100%;background:#4285F4;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#4285F4;font-weight:700;width:60px;text-align:right;">26% · 26</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:90px;flex-shrink:0;">United Kingdom</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:7%;height:100%;background:#00C853;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#00C853;font-weight:700;width:60px;text-align:right;">7% · 7</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:90px;flex-shrink:0;">India <span style="color:#00C853;">🏠</span></span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:5%;height:100%;background:#FBBC04;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#FBBC04;font-weight:700;width:60px;text-align:right;">5% · 5</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:90px;flex-shrink:0;">Germany</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:2%;height:100%;background:#9B59B6;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#9B59B6;font-weight:700;width:60px;text-align:right;">2% · 2</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:.8rem;">
+                                <span style="font-size:.78rem;color:#A0AEC0;width:90px;flex-shrink:0;">Turkey</span>
+                                <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:1%;height:100%;background:#C13584;border-radius:5px;"></div></div>
+                                <span style="font-size:.78rem;color:#C13584;font-weight:700;width:60px;text-align:right;">1% · 1</span>
+                            </div>
+                        </div>
+                        <div style="font-size:.73rem;color:#A0AEC0;margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--border);">Only 5 of 91 referring domains (5%) are India-based — a local .in link-building push would help geo-relevance for a Chennai-based brand.</div>
                     </div>
                 </div>
 
@@ -11019,8 +11016,8 @@
                 <div style="background:linear-gradient(135deg,rgba(155,89,182,0.1),rgba(155,89,182,0.04));border:1px solid rgba(155,89,182,0.3);border-radius:12px;padding:1rem 1.3rem;display:flex;gap:.8rem;align-items:flex-start;">
                     <span style="font-size:1.2rem;flex-shrink:0;">💡</span>
                     <div>
-                        <div style="font-size:.85rem;font-weight:700;color:#9B59B6;margin-bottom:.3rem;">Backlink Profile Health — Jun 19, 2026</div>
-                        <div style="font-size:.82rem;color:#A0AEC0;line-height:1.75;">95.1% of all backlinks point to the homepage — good concentration but needs diversification to deep pages (laminates, veneers, location pages). 77.8% of referring domains have Authority Score 0–20 (low-quality directories). <strong style="color:#E8EAED;">Priority actions:</strong> disavow 2 toxic domains · build links to /pages/laminates-collections and location pages · encourage quality editorial links from interior design blogs and local business directories.</div>
+                        <div style="font-size:.85rem;font-weight:700;color:#9B59B6;margin-bottom:.3rem;">Backlink Profile Health — Jul 2, 2026</div>
+                        <div style="font-size:.82rem;color:#A0AEC0;line-height:1.75;">Backlinks grew from 2.9K to 5.9K and referring domains from 72 to 91 since the June audit — strong link-building momentum. 96% of all backlinks still point to the homepage (5,434 of 5.9K) — good concentration but still needs diversification to deep pages (laminates, veneers, location pages). 74% of referring domains have Authority Score 0–20 (low-quality directories), and only 5% are India-based. <strong style="color:#E8EAED;">Priority actions:</strong> build links to product/collection pages instead of just the homepage · pursue more India-based (.in) backlinks for geo-relevance · target higher-AS domains to lift the 74% concentration in the 0–20 bracket. Overall Toxicity Score is 4 — low risk.</div>
                     </div>
                 </div>
 
@@ -11029,16 +11026,16 @@
             <!-- ── Panel 4: Toxicity ── -->
             <div id="seo-s4" class="seo-panel">
 
-                <!-- Jun 19, 2026 Audit Banner -->
+                <!-- Jul 2, 2026 Data Banner -->
                 <div style="background:linear-gradient(135deg,rgba(244,67,54,0.15),rgba(244,67,54,0.05));border:1px solid rgba(244,67,54,0.4);border-radius:12px;padding:.85rem 1.2rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
                     <span style="font-size:1.1rem;">🗓️</span>
                     <div style="flex:1;min-width:180px;">
-                        <div style="font-size:.8rem;font-weight:700;color:#F44336;letter-spacing:.5px;">JUN 19, 2026 — LATEST AUDIT ✅</div>
-                        <div style="font-size:.72rem;color:#A0AEC0;">Semrush Backlink Audit · Last run: Fri, Jun 19, 2026 · 2,947 backlinks analyzed</div>
+                        <div style="font-size:.8rem;font-weight:700;color:#F44336;letter-spacing:.5px;">JUL 2, 2026 — LATEST DATA ✅</div>
+                        <div style="font-size:.72rem;color:#A0AEC0;">Semrush Overview · Updated: Thu, Jul 2, 2026 · 5.9K backlinks · toxicity breakdown below from last full audit (Jun 19)</div>
                     </div>
                     <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
-                        <span style="background:rgba(255,179,0,0.15);border:1px solid rgba(255,179,0,0.4);color:#FFB300;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">⚠️ Medium Toxicity</span>
-                        <span style="background:rgba(244,67,54,0.12);border:1px solid rgba(244,67,54,0.35);color:#F44336;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">3 toxic · 4.2%</span>
+                        <span style="background:rgba(0,200,83,0.15);border:1px solid rgba(0,200,83,0.4);color:#00C853;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">✅ Overall Toxicity Score: 4 (Low)</span>
+                        <span style="background:rgba(244,67,54,0.12);border:1px solid rgba(244,67,54,0.35);color:#F44336;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">3 toxic · 4.2% (Jun 19 audit)</span>
                         <span style="background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);color:#FFB300;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">2 pot.toxic · 2.8%</span>
                         <span style="background:rgba(0,200,83,0.12);border:1px solid rgba(0,200,83,0.35);color:#00C853;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:20px;">67 non-toxic · 93.1%</span>
                     </div>
@@ -11063,18 +11060,18 @@
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Referring Domains</div>
-                        <div class="seo-kpi-val">72</div>
-                        <div class="seo-kpi-sub">63.9% follow · New: 10 · Lost: 14</div>
+                        <div class="seo-kpi-val">91</div>
+                        <div class="seo-kpi-sub">Ref. IPs: 100 · Ref. Subnets: 84</div>
                     </div>
                     <div class="seo-kpi">
-                        <div class="seo-kpi-label">Analyzed Backlinks</div>
-                        <div class="seo-kpi-val">2.9K</div>
-                        <div class="seo-kpi-sub">97.1% follow · New: 1,265 · Lost: 687</div>
+                        <div class="seo-kpi-label">Total Backlinks</div>
+                        <div class="seo-kpi-val">5.9K</div>
+                        <div class="seo-kpi-sub">98% follow · up from 2.9K in Jun</div>
                     </div>
                     <div class="seo-kpi">
                         <div class="seo-kpi-label">Authority Score</div>
                         <div class="seo-kpi-val" style="color:#4285F4;">13</div>
-                        <div class="seo-kpi-sub">↑ up from 11 in May</div>
+                        <div class="seo-kpi-sub">"Fine" rating · Overall Toxicity: 4</div>
                     </div>
                 </div>
 
@@ -11092,47 +11089,41 @@
 
                 <!-- Referring domains by Authority Score -->
                 <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:1.2rem;">
-                    <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:1rem;">📊 Referring Domains by Authority Score</div>
+                    <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:1rem;">📊 Referring Domains by Authority Score <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jul 2, 2026</span></div>
                     <div style="display:flex;flex-direction:column;gap:.55rem;">
                         <div style="display:flex;align-items:center;gap:.8rem;">
                             <span style="font-size:.78rem;color:#A0AEC0;width:60px;flex-shrink:0;">81–100</span>
-                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:4.2%;height:100%;background:#00C853;border-radius:5px;"></div></div>
-                            <span style="font-size:.78rem;color:#00C853;font-weight:700;width:50px;text-align:right;">4.2% (3)</span>
-                        </div>
-                        <div style="display:flex;align-items:center;gap:.8rem;">
-                            <span style="font-size:.78rem;color:#A0AEC0;width:60px;flex-shrink:0;">61–80</span>
-                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:0%;height:100%;background:#00C853;border-radius:5px;"></div></div>
-                            <span style="font-size:.78rem;color:#A0AEC0;font-weight:700;width:50px;text-align:right;">0% (0)</span>
+                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:2%;height:100%;background:#00C853;border-radius:5px;"></div></div>
+                            <span style="font-size:.78rem;color:#00C853;font-weight:700;width:50px;text-align:right;">2% (2)</span>
                         </div>
                         <div style="display:flex;align-items:center;gap:.8rem;">
                             <span style="font-size:.78rem;color:#A0AEC0;width:60px;flex-shrink:0;">41–60</span>
-                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:1.4%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
-                            <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:50px;text-align:right;">1.4% (1)</span>
+                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:2%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
+                            <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:50px;text-align:right;">2% (2)</span>
                         </div>
                         <div style="display:flex;align-items:center;gap:.8rem;">
                             <span style="font-size:.78rem;color:#A0AEC0;width:60px;flex-shrink:0;">21–40</span>
-                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:16.7%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
-                            <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:50px;text-align:right;">16.7% (12)</span>
+                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:22%;height:100%;background:#FFB300;border-radius:5px;"></div></div>
+                            <span style="font-size:.78rem;color:#FFB300;font-weight:700;width:50px;text-align:right;">22% (20)</span>
                         </div>
                         <div style="display:flex;align-items:center;gap:.8rem;">
                             <span style="font-size:.78rem;color:#A0AEC0;width:60px;flex-shrink:0;">0–20</span>
-                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:77.8%;height:100%;background:#F44336;border-radius:5px;"></div></div>
-                            <span style="font-size:.78rem;color:#F44336;font-weight:700;width:50px;text-align:right;">77.8% (56)</span>
+                            <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;"><div style="width:74%;height:100%;background:#F44336;border-radius:5px;"></div></div>
+                            <span style="font-size:.78rem;color:#F44336;font-weight:700;width:50px;text-align:right;">74% (67)</span>
                         </div>
                     </div>
-                    <div style="font-size:.75rem;color:#A0AEC0;margin-top:.8rem;padding-top:.7rem;border-top:1px solid var(--border);">77.8% of referring domains have Authority Score 0–20 — most are low-quality directories. Priority: disavow the highest toxicity ones first.</div>
+                    <div style="font-size:.75rem;color:#A0AEC0;margin-top:.8rem;padding-top:.7rem;border-top:1px solid var(--border);">74% of referring domains have Authority Score 0–20 — most are low-quality directories. Priority: disavow the highest toxicity ones first.</div>
                 </div>
 
                 <!-- Backlink Anchor Types -->
                 <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:1.2rem;">
-                    <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:1rem;">🔗 Backlinks by Anchor Type</div>
+                    <div style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:1rem;">🔗 Backlinks by Anchor Type <span style="font-size:.7rem;color:#A0AEC0;font-weight:400;">Jun 19, 2026</span></div>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:.7rem;">
                         <div style="background:rgba(0,132,255,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#0084FF;">71.7%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Compound</div><div style="font-size:.68rem;color:#A0AEC0;">2,114 backlinks</div></div>
                         <div style="background:rgba(160,174,192,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#A0AEC0;">23.0%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Other</div><div style="font-size:.68rem;color:#A0AEC0;">679 backlinks</div></div>
                         <div style="background:rgba(232,71,24,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#E84718;">4.2%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Branded</div><div style="font-size:.68rem;color:#A0AEC0;">124 backlinks</div></div>
                         <div style="background:rgba(0,200,83,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#00C853;">0.7%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Naked URL</div><div style="font-size:.68rem;color:#A0AEC0;">22 backlinks</div></div>
                         <div style="background:rgba(155,89,182,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#9B59B6;">0.2%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Organic</div><div style="font-size:.68rem;color:#A0AEC0;">5 backlinks</div></div>
-                        <div style="background:rgba(244,67,54,0.07);border-radius:8px;padding:.8rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#F44336;">0%</div><div style="font-size:.72rem;color:#A0AEC0;margin-top:.2rem;">Money</div><div style="font-size:.68rem;color:#A0AEC0;">0 backlinks</div></div>
                     </div>
                 </div>
 
@@ -11250,87 +11241,8 @@
                         </table>
                     </div>
                 </div>
-
-<!-- ── Panel 5: Fix Checklist ── -->
-            <div id="seo-s5" class="seo-panel">
-                <div class="seo-checklist-grid">
-                    <div class="seo-week-card">
-                        <div class="seo-week-head red">🔴 Week 1 — Quick Wins</div>
-                        <ul class="seo-checklist">
-                            <li><input type="checkbox"> Fix 2 duplicate title tags in Shopify</li>
-                            <li><input type="checkbox"> Update robots.txt — unblock CSS/JS and AI crawlers</li>
-                            <li><input type="checkbox"> Add meta descriptions to top 20 pages</li>
-                            <li><input type="checkbox"> Create /llms.txt for AI search engines</li>
-                            <li><input type="checkbox"> Fix the 1 no-anchor link</li>
-                            <li><input type="checkbox"> Disavow top 2 toxic domains immediately</li>
-                        </ul>
-                    </div>
-                    <div class="seo-week-card">
-                        <div class="seo-week-head orange">🟠 Week 2 — Structure</div>
-                        <ul class="seo-checklist">
-                            <li><input type="checkbox"> Add H1 tag to 4 pages missing it</li>
-                            <li><input type="checkbox"> Demote extra H1s on 16 pages to H2</li>
-                            <li><input type="checkbox"> Shorten 14 title tags (&lt;60 chars)</li>
-                            <li><input type="checkbox"> Add internal links to 7 orphaned pages</li>
-                            <li><input type="checkbox"> Send removal requests to toxic domains</li>
-                            <li><input type="checkbox"> Submit updated sitemap to GSC</li>
-                        </ul>
-                    </div>
-                    <div class="seo-week-card">
-                        <div class="seo-week-head purple">🟣 Week 3 — Content</div>
-                        <ul class="seo-checklist">
-                            <li><input type="checkbox"> Write remaining 33 meta descriptions</li>
-                            <li><input type="checkbox"> Add body copy to 74 thin-content pages</li>
-                            <li><input type="checkbox"> Diversify anchor text (reduce 59% concentrated)</li>
-                            <li><input type="checkbox"> Build 5+ local .in backlinks</li>
-                            <li><input type="checkbox"> Connect Google Search Console to Semrush</li>
-                            <li><input type="checkbox"> Enable Semrush International SEO tracking</li>
-                        </ul>
-                    </div>
-                    <div class="seo-week-card">
-                        <div class="seo-week-head green">🟢 Week 4 — Performance</div>
-                        <ul class="seo-checklist">
-                            <li><input type="checkbox"> Fix Core Web Vitals — target 75%+ pass rate</li>
-                            <li><input type="checkbox"> Convert images to WebP + add lazy loading</li>
-                            <li><input type="checkbox"> Minify CSS/JS + enable browser caching</li>
-                            <li><input type="checkbox"> Unblock 13 crawl-blocked pages</li>
-                            <li><input type="checkbox"> Re-run Semrush site audit</li>
-                            <li><input type="checkbox"> Review and act on AI Search issues</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="insights-section" style="margin-top:2rem">
-                    <h2 class="insights-title">🎯 Expected Outcomes After 4 Weeks</h2>
-                    <div class="seo-outcomes">
-                        <div class="seo-outcome">
-                            <div class="seo-outcome-metric">Site Health</div><span
-                                class="seo-outcome-from">91%</span><span class="seo-outcome-arrow">→</span><span
-                                class="seo-outcome-to">97%+</span>
-                        </div>
-                        <div class="seo-outcome">
-                            <div class="seo-outcome-metric">Core Web Vitals</div><span
-                                class="seo-outcome-from">0%</span><span class="seo-outcome-arrow">→</span><span
-                                class="seo-outcome-to">75%+</span>
-                        </div>
-                        <div class="seo-outcome">
-                            <div class="seo-outcome-metric">AI Search Health</div><span
-                                class="seo-outcome-from">82%</span><span class="seo-outcome-arrow">→</span><span
-                                class="seo-outcome-to">95%+</span>
-                        </div>
-                        <div class="seo-outcome">
-                            <div class="seo-outcome-metric">Crawled Pages Healthy</div><span
-                                class="seo-outcome-from">11</span><span class="seo-outcome-arrow">→</span><span
-                                class="seo-outcome-to">70+</span>
-                        </div>
-                        <div class="seo-outcome">
-                            <div class="seo-outcome-metric">Backlink Profile</div><span class="seo-outcome-from">7%
-                                toxic</span><span class="seo-outcome-arrow">→</span><span
-                                class="seo-outcome-to">Cleaner</span>
-                        </div>
-                    </div>
-                </div>
             </div>
+
         
             
         </section>
@@ -11526,17 +11438,13 @@
                         docs.google.com/presentation/d/1il0STIDMCaLEKyJ2e6tumx9njMVO3oXorxe7DFAiaZ8…</div>
                     <div style="margin-top:.6rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;">
                         <span
-                            style="background:rgba(251,188,4,0.2);color:#FBBC04;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;">📝
-                            Scripts & Briefs</span>
+                            style="background:rgba(251,188,4,0.2);color:#FBBC04;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;white-space:nowrap;">📝 Scripts &amp; Briefs</span>
                         <span
-                            style="background:rgba(193,53,132,0.15);color:#C13584;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;">🎬
-                            Meta + Google</span>
+                            style="background:rgba(193,53,132,0.15);color:#C13584;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;white-space:nowrap;">🎬 Meta + Google</span>
                         <span
-                            style="background:rgba(0,200,83,0.12);color:#00C853;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;">✅
-                            Creative Planning</span>
+                            style="background:rgba(0,200,83,0.12);color:#00C853;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;white-space:nowrap;">✅ Creative Planning</span>
                         <span
-                            style="background:rgba(66,133,244,0.15);color:#4285F4;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;">🖥️
-                            Google Slides</span>
+                            style="background:rgba(66,133,244,0.15);color:#4285F4;font-size:.72rem;padding:.25rem .65rem;border-radius:6px;font-weight:600;white-space:nowrap;">🖥️ Google Slides</span>
                     </div>
                 </div>
                 <a href="https://docs.google.com/presentation/d/1il0STIDMCaLEKyJ2e6tumx9njMVO3oXorxe7DFAiaZ8/edit?usp=sharing"
@@ -15066,6 +14974,7 @@
             }
             if (viewId === 'meta-march' && !marchMetaInit) { marchMetaInit = true; initMarchMetaCharts(); }
             if (viewId === 'meta-april' && !aprMetaTabInit) { aprMetaTabInit = true; initAprilMetaTabCharts(); }
+            if (viewId === 'meta-june' && !junMetaTabInit) { junMetaTabInit = true; initJuneMetaTabCharts(); }
         }
 
         function initMetaCharts() {
@@ -15184,8 +15093,8 @@
         }
 
         function initSEO_toxicity() {
-            mkChart('seoToxicChart', { type: 'doughnut', data: { labels: ['Non-Toxic', 'Potentially Toxic', 'Toxic'], datasets: [{ data: [2069, 685, 29], backgroundColor: ['#34A853', '#FFB300', '#F44336'], borderWidth: 0 }] }, options: donutOpts({ cutout: '60%', tooltipCb: { label: function (c) { return ' ' + c.label + ': ' + c.parsed + ' backlinks'; } } }) });
-            mkChart('seoDomToxicChart', { type: 'bar', data: { labels: ['Toxic Domains', 'Pot. Toxic', 'Non-Toxic'], datasets: [{ label: 'Domains', data: [3, 2, 67], backgroundColor: ['rgba(244,67,54,0.9)', 'rgba(255,179,0,0.8)', 'rgba(52,168,83,0.8)'], borderRadius: 6 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function (c) { return ' ' + c.parsed.y + ' domains'; } } }) }, scales: { y: { beginAtZero: true, grid: GRID, ticks: TICK }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } } });
+            mkChart('seoToxicityDonut', { type: 'doughnut', data: { labels: ['Non-Toxic', 'Potentially Toxic', 'Toxic'], datasets: [{ data: [2069, 685, 29], backgroundColor: ['#34A853', '#FFB300', '#F44336'], borderWidth: 0 }] }, options: donutOpts({ cutout: '60%', tooltipCb: { label: function (c) { return ' ' + c.label + ': ' + c.parsed + ' backlinks'; } } }) });
+            mkChart('seoDomainToxicityDonut', { type: 'bar', data: { labels: ['Toxic Domains', 'Pot. Toxic', 'Non-Toxic'], datasets: [{ label: 'Domains', data: [3, 2, 67], backgroundColor: ['rgba(244,67,54,0.9)', 'rgba(255,179,0,0.8)', 'rgba(52,168,83,0.8)'], borderRadius: 6 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tt({ callbacks: { label: function (c) { return ' ' + c.parsed.y + ' domains'; } } }) }, scales: { y: { beginAtZero: true, grid: GRID, ticks: TICK }, x: { grid: { display: false }, ticks: { color: '#E8EAED' } } } } });
         }
 
         // ═══════════════════════════════════════════════════════════════════
@@ -15633,6 +15542,7 @@
             // Init March charts when that tab is selected
             if (viewId === 'google-march' && !marchGoogleInit) { marchGoogleInit = true; initMarchGoogleCharts(); }
             if (viewId === 'google-april' && !aprGoogleTabInit) { aprGoogleTabInit = true; initAprilGoogleTabCharts(); }
+            if (viewId === 'google-june' && !junGoogleTabInit) { junGoogleTabInit = true; initJuneGoogleTabCharts(); }
         }
 
         // ═══════════════════════════════════════════════════════════════════
@@ -15803,6 +15713,24 @@
         }
 
         // ═══════════════════════════════════════════════════════════════════
+        // JUNE 2026 GOOGLE TAB CHARTS
+        // ═══════════════════════════════════════════════════════════════════
+        var junGoogleTabInit = false;
+        function initJuneGoogleTabCharts() {
+            mkChart('junDeviceDonut', { type:'doughnut', data:{labels:['Mobile (₹25,362 · 10,861 clicks)','Computers (₹1,200 · 559 clicks)','Tablets (₹86 · 25 clicks)'],datasets:[{data:[25362.14,1200.40,85.59],backgroundColor:['rgba(66,133,244,0.85)','rgba(52,168,83,0.8)','rgba(251,188,4,0.75)'],borderWidth:0}]}, options:donutOpts({cutout:'60%',tooltipCb:{label:function(c){return ' '+c.label;}}}) });
+
+            mkChart('junNetworkChart', { type:'bar', data:{labels:['Google Search','Search Partners','Cross-Network (PMax)'],datasets:[{label:'Clicks',data:[1800,1235,8410],backgroundColor:['rgba(66,133,244,0.8)','rgba(52,168,83,0.8)','rgba(234,67,53,0.8)'],borderRadius:6},{label:'Spend (₹)',data:[4744.07,2248.49,19655.56],backgroundColor:['rgba(66,133,244,0.4)','rgba(52,168,83,0.4)','rgba(234,67,53,0.4)'],borderRadius:6}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#E8EAED'}},tooltip:tt({})},scales:{y:{beginAtZero:true,grid:GRID,ticks:TICK},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:10}}}}} });
+
+            var junAgeLabels = ['18–24','25–34','35–44','45–54','55–64','65+'];
+            var junAgePct = [9.06, 33.44, 29.13, 16.57, 8.43, 3.41];
+            mkChart('junAgeChart', { type:'bar', data:{labels:junAgeLabels,datasets:[{label:'% of Audience',data:junAgePct,backgroundColor:'rgba(66,133,244,0.75)',borderRadius:6}]}, options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:tt({callbacks:{label:function(c){return ' '+c.parsed.x+'%';}}})},scales:{x:{beginAtZero:true,grid:GRID,ticks:{color:'#A0AEC0',callback:function(v){return v+'%';}}},y:{grid:{display:false},ticks:{color:'#E8EAED'}}}} });
+
+            var junOptLabels = ['SearchAd X NLD','Store Visit Choolai','Rest of Locations','Updated OMR','Local Salem'];
+            var junOptScores = [75.8, 86.1, 89.1, 92.7, 93.6];
+            mkChart('junOptScoreChart', { type:'bar', data:{labels:junOptLabels,datasets:[{label:'Optimization Score %',data:junOptScores,backgroundColor:junOptScores.map(function(v){return v>=85?'rgba(0,200,83,0.85)':'rgba(251,188,4,0.8)';}),borderRadius:6}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tt({callbacks:{label:function(c){return ' '+c.parsed.y+'%';}}})},scales:{y:{beginAtZero:true,max:100,grid:GRID,ticks:{color:'#A0AEC0',callback:function(v){return v+'%';}}},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:9},maxRotation:30}}}} });
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
         // APRIL 2026 META TAB CHARTS
         // ═══════════════════════════════════════════════════════════════════
         var aprMetaTabInit = false;
@@ -15823,6 +15751,30 @@
             mkChart('aprMetaSpendLeadsTab', { type:'bar', data:{labels:actCamps,datasets:[{label:'Spend (₹)',data:actSpend,backgroundColor:'rgba(0,132,255,0.7)',borderRadius:5,yAxisID:'y'},{label:'Leads',data:actLeads,backgroundColor:'rgba(0,200,83,0.7)',borderRadius:5,yAxisID:'y1'}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#E8EAED'}}},scales:{y:{beginAtZero:true,position:'left',grid:GRID,ticks:{color:'#A0AEC0',callback:function(v){return '₹'+v;}}},y1:{beginAtZero:true,position:'right',grid:{display:false},ticks:{color:'#00C853'}},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:10}}}}} });
 
             mkChart('aprMetaReachDonutTab', { type:'doughnut', data:{labels:['Choolai NEW (2,67,103)','OMR NEW (2,51,931)','ResetOff NEW (1,71,353)','Salem NEW (1,49,415)','Cust+Look NEW (1,34,913)','Salem OLD (2,96,031)'],datasets:[{data:[267103,251931,171353,149415,134913,296031],backgroundColor:['rgba(251,188,4,0.85)','rgba(0,132,255,0.85)','rgba(234,67,53,0.85)','rgba(0,200,83,0.85)','rgba(155,89,182,0.85)'],borderWidth:0}]}, options:donutOpts({cutout:'60%',tooltipCb:{label:function(c){return ' '+c.label;}}}) });
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // JUNE 2026 META TAB CHARTS
+        // ═══════════════════════════════════════════════════════════════════
+        var junMetaTabInit = false;
+        function initJuneMetaTabCharts() {
+            var junCamps = ['Choolai (10-Jun)','OMR (12-Jun)','Salem (12-Jun)','Cust+Look (07-Apr)','Salem (18-Apr)','OMR (07-Apr)','Choolai (07-Apr)','Rest Off (15-Jun)','ResetOff (07-Apr)'];
+            var junLeads = [118,69,57,134,39,76,77,26,39];
+            var junCPR = [73.39,114.07,136.75,54.01,117.63,58.28,53.75,92.26,44.17];
+            var junSpend = [8660.50,7871.01,7794.93,7236.71,4587.47,4428.97,4138.97,2398.74,1722.66];
+            var junReach = [31490,15290,62223,26829,67327,46266,40847,24184,47163];
+            var junActive = [true,true,true,true,false,false,false,true,false];
+
+            mkChart('junMetaLeadsChartTab', { type:'bar', data:{labels:junCamps,datasets:[{label:'Leads',data:junLeads,backgroundColor:junActive.map(function(a){return a?'rgba(0,132,255,0.8)':'rgba(160,174,192,0.5)';}),borderRadius:6}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tt({callbacks:{label:function(c){return ' '+c.parsed.y+' leads';}}})},scales:{y:{beginAtZero:true,grid:GRID,ticks:TICK},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:9},maxRotation:45}}}} });
+
+            mkChart('junMetaCPRChartTab', { type:'bar', data:{labels:junCamps,datasets:[{label:'CPR (₹)',data:junCPR,backgroundColor:junCPR.map(function(v){return v<100?'rgba(0,200,83,0.85)':v<200?'rgba(251,188,4,0.8)':'rgba(234,67,53,0.8)';}),borderRadius:6}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tt({callbacks:{label:function(c){return ' ₹'+c.parsed.y.toFixed(2);}}})},scales:{y:{beginAtZero:true,grid:GRID,ticks:{color:'#A0AEC0',callback:function(v){return '₹'+v;}}},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:9},maxRotation:45}}}} });
+
+            var junActCamps = ['Choolai (10-Jun)','OMR (12-Jun)','Salem (12-Jun)','Cust+Look (07-Apr)','Rest Off (15-Jun)'];
+            var junActSpend = [8660.50,7871.01,7794.93,7236.71,2398.74];
+            var junActLeads = [118,69,57,134,26];
+            mkChart('junMetaSpendLeadsTab', { type:'bar', data:{labels:junActCamps,datasets:[{label:'Spend (₹)',data:junActSpend,backgroundColor:'rgba(0,132,255,0.7)',borderRadius:5,yAxisID:'y'},{label:'Leads',data:junActLeads,backgroundColor:'rgba(0,200,83,0.7)',borderRadius:5,yAxisID:'y1'}]}, options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#E8EAED'}}},scales:{y:{beginAtZero:true,position:'left',grid:GRID,ticks:{color:'#A0AEC0',callback:function(v){return '₹'+v;}}},y1:{beginAtZero:true,position:'right',grid:{display:false},ticks:{color:'#00C853'}},x:{grid:{display:false},ticks:{color:'#E8EAED',font:{size:10}}}}} });
+
+            mkChart('junMetaReachDonutTab', { type:'doughnut', data:{labels:['Salem (18-Apr) (67,327)','Salem (12-Jun) (62,223)','OMR (07-Apr) (46,266)','ResetOff (07-Apr) (47,163)','Choolai (07-Apr) (40,847)','Cust+Look (07-Apr) (26,829)','Rest Off (15-Jun) (24,184)','Choolai (10-Jun) (31,490)','OMR (12-Jun) (15,290)'],datasets:[{data:[67327,62223,46266,47163,40847,26829,24184,31490,15290],backgroundColor:['rgba(251,188,4,0.85)','rgba(0,132,255,0.85)','rgba(234,67,53,0.85)','rgba(0,200,83,0.85)','rgba(155,89,182,0.85)','rgba(96,165,250,0.85)','rgba(0,217,192,0.85)','rgba(255,179,0,0.85)','rgba(193,53,132,0.85)'],borderWidth:0}]}, options:donutOpts({cutout:'60%',tooltipCb:{label:function(c){return ' '+c.label;}}}) });
         }
 
         // ═══════════════════════════════════════════════════════════════════
